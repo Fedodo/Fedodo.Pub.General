@@ -1,6 +1,6 @@
 name: fedodo_general
-description: A new Flutter package project.
-version: 0.0.5
+description: A flutter package which contains general components of the Fedodo-UIs.
+version: 0.0.6
 homepage: https://fedodo.org
 
 environment:
