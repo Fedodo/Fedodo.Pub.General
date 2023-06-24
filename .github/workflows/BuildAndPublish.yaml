@@ -1,0 +1,24 @@
+name: BuildAndPublish
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+jobs:
+  Prepare:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: Fedodo/Fedodo.Pipelines/PrepareDart@main
+        with: 
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  CreateTag:
+    runs-on: ubuntu-latest
+    needs: Prepare
+    steps:
+      - uses: Fedodo/Fedodo.Pipelines/CreateTagDart@main
+        with: 
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          REPO_NAME: Fedodo.Pub.General
