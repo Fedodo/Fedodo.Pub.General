@@ -17,6 +17,9 @@ jobs:
 
       - run: git pull origin main
 
+      - name: Install Flutter
+        uses: britannio/action-install-flutter@main
+
       # Setup Dart SDK with JWT token
       - uses: dart-lang/setup-dart@d6a63dab3335f427404425de0fbfed4686d93c4f
 
