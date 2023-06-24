@@ -1,3 +1,9 @@
+## v0.1.1
+
+-  🔀 Merge pull request #3 from Fedodo/dev
+-  🔥 Removed files
+-  📝 Updated Changelog
+
 ## v0.1.0
 
 -  🔀 Merge pull request #2 from Fedodo/dev
