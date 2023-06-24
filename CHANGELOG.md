@@ -1,3 +1,8 @@
+## v0.0.6
+
+-  🔧 Updated description
+-  📝 Updated Changelog
+
 ## v0.0.5
 
 -  ⚗️ Added install for flutter
