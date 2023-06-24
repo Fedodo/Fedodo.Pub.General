@@ -1,3 +1,8 @@
+## v0.0.8
+
+-  🔖 Updated version
+-  📝 Updated Changelog
+
 ## v0.0.7
 
 -  🔖 Updated version
