@@ -22,14 +22,14 @@ jobs:
 
       # Minimal package setup and dry run checks.
       - name: Install dependencies
-        run: dart pub get
+        run: flutter pub get
         # working-directory: ${{ inputs.working-directory }}
 
       - name: Publish - dry run
-        run: dart pub publish --dry-run
+        run: flutter pub publish --dry-run
         # working-directory: ${{ inputs.working-directory }}
 
       # Publishing...
       - name: Publish to pub.dev
-        run: dart pub publish -f
+        run: flutter pub publish -f
         # working-directory: ${{ inputs.working-directory }}
