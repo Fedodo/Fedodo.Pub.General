@@ -1,3 +1,11 @@
+## v1.0.2
+
+-  🔀 Merge pull request #7 from Fedodo/dev
+-  🔖 Updated version
+-  🔥 Removed platforms
+-  🙈 Added ephemeral to gitignore
+-  📝 Updated Changelog
+
 ## v1.0.1
 
 -  🔀 Merge pull request #6 from Fedodo/dev
