@@ -1,3 +1,9 @@
+## v1.0.4
+
+-  🔀 Merge pull request #9 from Fedodo/dev
+-  💚 Added ignores
+-  📝 Updated Changelog
+
 ## v1.0.3
 
 -  🔀 Merge pull request #8 from Fedodo/dev
