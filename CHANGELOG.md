@@ -1,3 +1,9 @@
+## v1.0.3
+
+-  🔀 Merge pull request #8 from Fedodo/dev
+-  💚 Added random_string dependency
+-  📝 Updated Changelog
+
 ## v1.0.2
 
 -  🔀 Merge pull request #7 from Fedodo/dev
