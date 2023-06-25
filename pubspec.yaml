@@ -1,6 +1,6 @@
 name: fedodo_general
 description: A flutter package which contains general components of the Fedodo-UIs.
-version: 1.0.0
+version: 1.0.1
 homepage: https://fedodo.org
 
 environment:
@@ -13,6 +13,7 @@ dependencies:
   shared_preferences: ^2.0.17
   oauth2_client: ^3.0.0
   flutter_guid: ^0.3.1
+  http: ^0.13.5
 
 dev_dependencies:
   flutter_test:
