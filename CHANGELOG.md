@@ -1,3 +1,10 @@
+## v0.1.2
+
+-  🔀 Merge pull request #4 from Fedodo/dev
+-  🔖 Updated version
+-  ✨ Added fedodo to extension names
+-  📝 Updated Changelog
+
 ## v0.1.1
 
 -  🔀 Merge pull request #3 from Fedodo/dev
