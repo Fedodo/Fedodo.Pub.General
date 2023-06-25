@@ -90,6 +90,7 @@ class SuSiView extends StatelessWidget {
     Preferences.prefs!
         .setString("AccessToken", (await login.login(clientId, clientSecret))!);
 
+    // ignore: use_build_context_synchronously
     Navigator.pushReplacement(
       context,
       MaterialPageRoute(
