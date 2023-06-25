@@ -1,3 +1,9 @@
+## v1.0.0
+
+-  🔀 Merge pull request #5 from Fedodo/dev
+-  ✨ Added susi
+-  📝 Updated Changelog
+
 ## v0.1.2
 
 -  🔀 Merge pull request #4 from Fedodo/dev
