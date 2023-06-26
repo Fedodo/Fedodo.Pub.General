@@ -1,3 +1,9 @@
+## v1.3.0
+
+-  🔀 Merge pull request #12 from Fedodo/dev
+-  ✨ Added app globals
+-  📝 Updated Changelog
+
 ## v1.2.0
 
 -  🔀 Merge pull request #11 from Fedodo/dev
