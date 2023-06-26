@@ -1,3 +1,9 @@
+## v1.1.0
+
+-  🔀 Merge pull request #10 from Fedodo/dev
+-  ✨ Added general
+-  📝 Updated Changelog
+
 ## v1.0.4
 
 -  🔀 Merge pull request #9 from Fedodo/dev
