@@ -1,3 +1,9 @@
+## v1.4.1
+
+-  🔀 Merge pull request #14 from Fedodo/dev
+-  🐛 Updated to widget
+-  📝 Updated Changelog
+
 ## v1.4.0
 
 -  🔀 Merge pull request #13 from Fedodo/dev
