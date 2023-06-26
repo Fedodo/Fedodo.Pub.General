@@ -1,3 +1,9 @@
+## v1.4.0
+
+-  🔀 Merge pull request #13 from Fedodo/dev
+-  ✨ Added app creation
+-  📝 Updated Changelog
+
 ## v1.3.0
 
 -  🔀 Merge pull request #12 from Fedodo/dev
