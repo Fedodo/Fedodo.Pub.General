@@ -1,3 +1,9 @@
+## v1.2.0
+
+-  🔀 Merge pull request #11 from Fedodo/dev
+-  🚚 Added fonts
+-  📝 Updated Changelog
+
 ## v1.1.0
 
 -  🔀 Merge pull request #10 from Fedodo/dev
