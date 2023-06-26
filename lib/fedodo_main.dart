@@ -1,4 +1,4 @@
-import 'package:fedodo_general/Globals/app_globals.dart';
+import 'package:fedodo_general/material_app.dart';
 import 'package:flutter/material.dart';
 
 class FedodoMain extends StatelessWidget {
@@ -13,9 +13,9 @@ class FedodoMain extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AppGlobals.getMaterialApp(
-      title,
-      home,
+    return FedodoMaterialApp(
+      title: title,
+      home: home,
     );
   }
 }
