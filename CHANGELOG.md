@@ -1,3 +1,9 @@
+## v1.5.3
+
+-  🔀 Merge pull request #20 from Fedodo/dev
+-  ✨ Added appName constant
+-  📝 Updated Changelog
+
 ## v1.5.2
 
 -  🔀 Merge pull request #19 from Fedodo/dev
