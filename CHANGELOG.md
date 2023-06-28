@@ -1,3 +1,12 @@
+## v1.5.0
+
+-  🔀 Merge pull request #16 from Fedodo/dev
+-  🔖 Updated version
+-  🔀 Merge pull request #15 from Fedodo/dev
+-  🚧 Added experimental navigation
+-  🚧 Started navigation
+-  📝 Updated Changelog
+
 ## v1.4.1
 
 -  🔀 Merge pull request #14 from Fedodo/dev
