@@ -1,3 +1,9 @@
+## v1.5.1
+
+-  🔀 Merge pull request #17 from Fedodo/dev
+-  🚧 Added sideMenuController
+-  📝 Updated Changelog
+
 ## v1.5.0
 
 -  🔀 Merge pull request #16 from Fedodo/dev
