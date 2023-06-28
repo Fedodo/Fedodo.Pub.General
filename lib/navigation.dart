@@ -8,9 +8,10 @@ class Navigation extends StatefulWidget {
     required this.inputScreens,
     required this.sideMenuItems,
     required this.appBarActions,
-    this.floatingActionButton,
+    required this.floatingActionButton,
     required this.bottomNavigationBarItems,
     required this.scrollController,
+    required this.sideMenuController,
   });
 
   final String title;
@@ -20,6 +21,7 @@ class Navigation extends StatefulWidget {
   final Widget? floatingActionButton;
   final List<BottomNavigationBarItem> bottomNavigationBarItems;
   final ScrollController scrollController;
+  final SideMenuController sideMenuController;
 
   @override
   State<Navigation> createState() => _NavigationState();
@@ -27,7 +29,6 @@ class Navigation extends StatefulWidget {
 
 class _NavigationState extends State<Navigation> {
   int currentIndex = 0;
-  SideMenuController sideMenuController = SideMenuController();
 
   @override
   Widget build(BuildContext context) {
@@ -86,7 +87,7 @@ class _NavigationState extends State<Navigation> {
                     ),
                     // footer: const Text('Fedodo v1.1.1'),
                     items: widget.sideMenuItems,
-                    controller: sideMenuController,
+                    controller: widget.sideMenuController,
                   ),
                 ),
               ),
