@@ -1,0 +1,141 @@
+import 'package:easy_sidemenu/easy_sidemenu.dart';
+import 'package:flutter/material.dart';
+
+class Navigation extends StatefulWidget {
+  const Navigation({
+    super.key,
+    required this.title,
+    required this.inputScreens,
+    required this.sideMenuItems,
+    required this.appBarActions,
+    this.floatingActionButton,
+    required this.bottomNavigationBarItems,
+    required this.scrollController,
+  });
+
+  final String title;
+  final List<Widget> inputScreens;
+  final List<SideMenuItem> sideMenuItems;
+  final List<Widget> appBarActions;
+  final Widget? floatingActionButton;
+  final List<BottomNavigationBarItem> bottomNavigationBarItems;
+  final ScrollController scrollController;
+
+  @override
+  State<Navigation> createState() => _NavigationState();
+}
+
+class _NavigationState extends State<Navigation> {
+  int currentIndex = 0;
+  SideMenuController sideMenuController = SideMenuController();
+
+  @override
+  Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
+    double height = MediaQuery.of(context).size.height;
+
+    if (width > height && width >= 600) {
+      EdgeInsets paddings = EdgeInsets.fromLTRB(width * 0.1, 0, width * 0.1, 0);
+
+      List screens = [];
+
+      for (var element in widget.inputScreens) {
+        screens.add(
+          Padding(
+            padding: paddings,
+            child: element,
+          ),
+        );
+      }
+
+      return Scaffold(
+        appBar: AppBar(
+          actions: widget.appBarActions,
+          title: Text(
+            widget.title,
+            style: const TextStyle(
+              fontFamily: "Righteous",
+              fontSize: 25,
+              fontWeight: FontWeight.w100,
+              color: Colors.white,
+            ),
+          ),
+        ),
+        body: Row(
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(12),
+                child: SizedBox(
+                  // Workaround for the SideMenu
+                  height: height,
+                  width: 300,
+                  child: SideMenu(
+                    style: SideMenuStyle(
+                      displayMode: SideMenuDisplayMode.open,
+                      hoverColor: const Color.fromARGB(165, 0, 84, 84),
+                      selectedColor: const Color.fromARGB(255, 0, 84, 84),
+                      selectedTitleTextStyle:
+                          const TextStyle(color: Colors.white),
+                      selectedIconColor: Colors.white,
+                      unselectedIconColor: Colors.white70,
+                      unselectedTitleTextStyle:
+                          const TextStyle(color: Colors.white70),
+                      backgroundColor: const Color.fromARGB(255, 1, 35, 35),
+                    ),
+                    // footer: const Text('Fedodo v1.1.1'),
+                    items: widget.sideMenuItems,
+                    controller: sideMenuController,
+                  ),
+                ),
+              ),
+            ),
+            Expanded(
+              child: screens[currentIndex],
+            ),
+          ],
+        ),
+        floatingActionButton: widget.floatingActionButton,
+      );
+    } else {
+      List screens = widget.inputScreens;
+
+      return Scaffold(
+        appBar: AppBar(
+          actions: widget.appBarActions,
+          title: Text(
+            widget.title,
+            style: const TextStyle(
+              fontFamily: "Righteous",
+              fontSize: 25,
+              fontWeight: FontWeight.w100,
+              color: Colors.white,
+            ),
+          ),
+        ),
+        bottomNavigationBar: BottomNavigationBar(
+          currentIndex: currentIndex,
+          onTap: changeMenu,
+          items: widget.bottomNavigationBarItems,
+        ),
+        body: screens[currentIndex],
+        floatingActionButton: widget.floatingActionButton,
+      );
+    }
+  }
+
+  void changeMenu(int index) {
+    if (currentIndex == 0 && index == 0) {
+      widget.scrollController.animateTo(
+        0,
+        duration: const Duration(seconds: 1),
+        curve: Curves.easeInOut,
+      );
+    }
+
+    setState(() {
+      currentIndex = index;
+    });
+  }
+}
