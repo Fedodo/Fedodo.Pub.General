@@ -6,22 +6,18 @@ class Navigation extends StatefulWidget {
     super.key,
     required this.title,
     required this.inputScreens,
-    required this.sideMenuItems,
     required this.appBarActions,
     required this.floatingActionButton,
     required this.bottomNavigationBarItems,
     required this.scrollController,
-    required this.sideMenuController,
   });
 
   final String title;
   final List<Widget> inputScreens;
-  final List<SideMenuItem> sideMenuItems;
   final List<Widget> appBarActions;
   final Widget? floatingActionButton;
   final List<BottomNavigationBarItem> bottomNavigationBarItems;
   final ScrollController scrollController;
-  final SideMenuController sideMenuController;
 
   @override
   State<Navigation> createState() => _NavigationState();
@@ -29,6 +25,7 @@ class Navigation extends StatefulWidget {
 
 class _NavigationState extends State<Navigation> {
   int currentIndex = 0;
+  SideMenuController sideMenuController = SideMenuController();
 
   @override
   Widget build(BuildContext context) {
@@ -37,17 +34,8 @@ class _NavigationState extends State<Navigation> {
 
     if (width > height && width >= 600) {
       EdgeInsets paddings = EdgeInsets.fromLTRB(width * 0.1, 0, width * 0.1, 0);
-
-      List screens = [];
-
-      for (var element in widget.inputScreens) {
-        screens.add(
-          Padding(
-            padding: paddings,
-            child: element,
-          ),
-        );
-      }
+      List<Widget> screens = createScreens(paddings);
+      List<SideMenuItem> sideMenuItems = createSideMenuItems();
 
       return Scaffold(
         appBar: AppBar(
@@ -86,8 +74,8 @@ class _NavigationState extends State<Navigation> {
                       backgroundColor: const Color.fromARGB(255, 1, 35, 35),
                     ),
                     // footer: const Text('Fedodo v1.1.1'),
-                    items: widget.sideMenuItems,
-                    controller: widget.sideMenuController,
+                    items: sideMenuItems,
+                    controller: sideMenuController,
                   ),
                 ),
               ),
@@ -124,6 +112,44 @@ class _NavigationState extends State<Navigation> {
         floatingActionButton: widget.floatingActionButton,
       );
     }
+  }
+
+  List<Widget> createScreens(EdgeInsets paddings) {
+    List<Widget> screens = [];
+    
+    for (var element in widget.inputScreens) {
+      screens.add(
+        Padding(
+          padding: paddings,
+          child: element,
+        ),
+      );
+    }
+    return screens;
+  }
+
+  List<SideMenuItem> createSideMenuItems() {
+    List<SideMenuItem> sideMenuItems = [];
+    
+    var counter = 0;
+    for (var element in widget.bottomNavigationBarItems) {
+      sideMenuItems.add(
+        SideMenuItem(
+          priority: counter,
+          title: element.label,
+          onTap: (int index, SideMenuController controller) {
+            setState(() {
+              currentIndex = index;
+            });
+            sideMenuController.changePage(currentIndex);
+          },
+          icon: element.icon as Icon,
+        ),
+      );
+    
+      counter++;
+    }
+    return sideMenuItems;
   }
 
   void changeMenu(int index) {
