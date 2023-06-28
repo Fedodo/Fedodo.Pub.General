@@ -1,3 +1,11 @@
+## v1.5.2
+
+-  🔀 Merge pull request #19 from Fedodo/dev
+-  🔖 Updated version
+-  🔀 Merge pull request #18 from Fedodo/dev
+-  🚧 Removed sideMenu code from parameters
+-  📝 Updated Changelog
+
 ## v1.5.1
 
 -  🔀 Merge pull request #17 from Fedodo/dev
