@@ -1,6 +1,4 @@
 import 'package:easy_sidemenu/easy_sidemenu.dart';
-import 'package:fedodo_general/Globals/general.dart';
-import 'package:fedodo_general/Globals/preferences.dart';
 import 'package:flutter/material.dart';
 
 class Navigation extends StatefulWidget {
@@ -8,10 +6,20 @@ class Navigation extends StatefulWidget {
     super.key,
     required this.title,
     required this.inputScreens,
+    required this.sideMenuItems,
+    required this.appBarActions,
+    this.floatingActionButton,
+    required this.bottomNavigationBarItems,
+    required this.scrollController,
   });
 
   final String title;
   final List<Widget> inputScreens;
+  final List<SideMenuItem> sideMenuItems;
+  final List<Widget> appBarActions;
+  final Widget? floatingActionButton;
+  final List<BottomNavigationBarItem> bottomNavigationBarItems;
+  final ScrollController scrollController;
 
   @override
   State<Navigation> createState() => _NavigationState();
@@ -40,55 +48,9 @@ class _NavigationState extends State<Navigation> {
         );
       }
 
-      List<SideMenuItem> items = [
-        SideMenuItem(
-          priority: 0,
-          title: 'Home',
-          onTap: (int index, SideMenuController controller) {
-            setState(() {
-              currentIndex = index;
-            });
-            sideMenuController.changePage(currentIndex);
-          },
-          icon: const Icon(Icons.home),
-        ),
-        SideMenuItem(
-          priority: 1,
-          title: 'Search',
-          onTap: (int index, SideMenuController controller) {
-            setState(() {
-              currentIndex = index;
-            });
-            sideMenuController.changePage(currentIndex);
-          },
-          icon: const Icon(Icons.search),
-        ),
-        SideMenuItem(
-          priority: 2,
-          title: 'Profile',
-          onTap: (int index, SideMenuController controller) {
-            setState(() {
-              currentIndex = index;
-            });
-            sideMenuController.changePage(currentIndex);
-          },
-          icon: const Icon(Icons.person),
-        ),
-      ];
-
       return Scaffold(
         appBar: AppBar(
-          actions: [
-            SwitchActorButton(
-              reloadState: () {
-                setState(() {
-                  firstPage =
-                      "https://${Preferences.prefs!.getString("DomainName")}/inbox/${General.actorId}/page/0";
-                  profileId = General.fullActorId;
-                });
-              },
-            ),
-          ],
+          actions: widget.appBarActions,
           title: Text(
             widget.title,
             style: const TextStyle(
@@ -123,7 +85,7 @@ class _NavigationState extends State<Navigation> {
                       backgroundColor: const Color.fromARGB(255, 1, 35, 35),
                     ),
                     // footer: const Text('Fedodo v1.1.1'),
-                    items: items,
+                    items: widget.sideMenuItems,
                     controller: sideMenuController,
                   ),
                 ),
@@ -134,28 +96,14 @@ class _NavigationState extends State<Navigation> {
             ),
           ],
         ),
-        floatingActionButton: FloatingActionButton(
-          onPressed: createPost,
-          tooltip: 'Create Post',
-          child: const Icon(Icons.create),
-        ),
+        floatingActionButton: widget.floatingActionButton,
       );
     } else {
       List screens = widget.inputScreens;
 
       return Scaffold(
         appBar: AppBar(
-          actions: [
-            SwitchActorButton(
-              reloadState: () {
-                setState(() {
-                  firstPage =
-                      "https://${Preferences.prefs!.getString("DomainName")}/inbox/${General.actorId}/page/0";
-                  profileId = General.fullActorId;
-                });
-              },
-            ),
-          ],
+          actions: widget.appBarActions,
           title: Text(
             widget.title,
             style: const TextStyle(
@@ -169,27 +117,17 @@ class _NavigationState extends State<Navigation> {
         bottomNavigationBar: BottomNavigationBar(
           currentIndex: currentIndex,
           onTap: changeMenu,
-          items: const <BottomNavigationBarItem>[
-            BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
-            BottomNavigationBarItem(icon: Icon(Icons.search), label: "Search"),
-            // BottomNavigationBarItem(
-            //     icon: Icon(Icons.notifications), label: "Notifications"),
-            BottomNavigationBarItem(icon: Icon(Icons.person), label: "Profile"),
-          ],
+          items: widget.bottomNavigationBarItems,
         ),
         body: screens[currentIndex],
-        floatingActionButton: FloatingActionButton(
-          onPressed: createPost,
-          tooltip: 'Create Post',
-          child: const Icon(Icons.create),
-        ),
+        floatingActionButton: widget.floatingActionButton,
       );
     }
   }
 
   void changeMenu(int index) {
     if (currentIndex == 0 && index == 0) {
-      controller.animateTo(
+      widget.scrollController.animateTo(
         0,
         duration: const Duration(seconds: 1),
         curve: Curves.easeInOut,
