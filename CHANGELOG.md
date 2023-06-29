@@ -1,3 +1,9 @@
+## v1.6.1
+
+-  🔀 Merge pull request #24 from Fedodo/dev
+-  ⚗️ Removed everything except redirect
+-  📝 Updated Changelog
+
 ## v1.6.0
 
 -  🔀 Merge pull request #23 from Fedodo/dev
