@@ -1,3 +1,11 @@
+## v1.6.0
+
+-  🔀 Merge pull request #23 from Fedodo/dev
+-  🔖 Updated version
+-  🔀 Merge pull request #22 from Fedodo/dev
+-  ⚗️ Added flutter web folder
+-  📝 Updated Changelog
+
 ## v1.5.3
 
 -  🔀 Merge pull request #20 from Fedodo/dev
