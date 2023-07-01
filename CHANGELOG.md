@@ -1,3 +1,9 @@
+## v1.6.3
+
+-  🔀 Merge pull request #26 from Fedodo/dev
+-  🔊 Updated logging
+-  📝 Updated Changelog
+
 ## v1.6.2
 
 -  🔀 Merge pull request #25 from Fedodo/dev
