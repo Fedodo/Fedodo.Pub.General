@@ -1,5 +1,6 @@
 import 'package:fedodo_general/Globals/preferences.dart';
 import 'package:jwt_decoder/jwt_decoder.dart';
+import 'package:logger/logger.dart';
 
 class General {
   static String appName = "Fedodo";
@@ -36,4 +37,6 @@ class General {
 
     return actorIds;
   }
+
+  static final Logger logger = Logger();
 }

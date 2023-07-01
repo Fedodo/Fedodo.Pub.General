@@ -1,4 +1,5 @@
 import 'package:easy_sidemenu/easy_sidemenu.dart';
+import 'package:fedodo_general/Globals/general.dart';
 import 'package:flutter/material.dart';
 
 class Navigation extends StatefulWidget {
@@ -29,8 +30,12 @@ class _NavigationState extends State<Navigation> {
 
   @override
   Widget build(BuildContext context) {
+    General.logger.v("Building Navigation");
+
     double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
+
+    General.logger.d("Width: $width. Height: $height.");
 
     if (width > height && width >= 600) {
       EdgeInsets paddings = EdgeInsets.fromLTRB(width * 0.1, 0, width * 0.1, 0);
@@ -116,7 +121,7 @@ class _NavigationState extends State<Navigation> {
 
   List<Widget> createScreens(EdgeInsets paddings) {
     List<Widget> screens = [];
-    
+
     for (var element in widget.inputScreens) {
       screens.add(
         Padding(
@@ -130,7 +135,7 @@ class _NavigationState extends State<Navigation> {
 
   List<SideMenuItem> createSideMenuItems() {
     List<SideMenuItem> sideMenuItems = [];
-    
+
     var counter = 0;
     for (var element in widget.bottomNavigationBarItems) {
       sideMenuItems.add(
@@ -146,7 +151,7 @@ class _NavigationState extends State<Navigation> {
           icon: element.icon as Icon,
         ),
       );
-    
+
       counter++;
     }
     return sideMenuItems;
