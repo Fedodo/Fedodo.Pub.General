@@ -38,6 +38,8 @@ class _NavigationState extends State<Navigation> {
     General.logger.d("Width: $width. Height: $height.");
 
     if (width > height && width >= 600) {
+      General.logger.d("Using landscape navigation.");
+
       EdgeInsets paddings = EdgeInsets.fromLTRB(width * 0.1, 0, width * 0.1, 0);
       List<Widget> screens = createScreens(paddings);
       List<SideMenuItem> sideMenuItems = createSideMenuItems();
@@ -93,6 +95,8 @@ class _NavigationState extends State<Navigation> {
         floatingActionButton: widget.floatingActionButton,
       );
     } else {
+      General.logger.d("Using portrait navigation.");
+
       List screens = widget.inputScreens;
 
       return Scaffold(
@@ -138,6 +142,8 @@ class _NavigationState extends State<Navigation> {
 
     var counter = 0;
     for (var element in widget.bottomNavigationBarItems) {
+      if (element.label == null) General.logger.w("Label is null!");
+
       sideMenuItems.add(
         SideMenuItem(
           priority: counter,
