@@ -1,3 +1,9 @@
+## v1.7.2
+
+-  🔀 Merge pull request #31 from Fedodo/dev
+-  👷 Disabled dry run
+-  📝 Updated Changelog
+
 ## v1.7.1
 
 -  🔀 Merge pull request #30 from Fedodo/dev
