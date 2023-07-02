@@ -1,5 +1,5 @@
 import 'package:activitypub/activitypub.dart';
-import 'package:fedodo_general/Widgets/profile/enums/profile_button_state.dart';
+import 'package:fedodo_general/widgets/profile/enums/profile_button_state.dart';
 import 'package:flutter/material.dart';
 
 class ProfileNameRow extends StatefulWidget {
