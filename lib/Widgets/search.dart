@@ -4,12 +4,10 @@ import 'package:flutter/material.dart';
 class Search extends StatelessWidget {
   Search({
     Key? key,
-    required this.appTitle,
     required this.getProfile,
   }) : super(key: key);
 
   final searchTextEditingController = TextEditingController();
-  final String appTitle;
   final Function(String profileId) getProfile;
 
   @override
@@ -53,11 +51,12 @@ class Search extends StatelessWidget {
                         transitionsBuilder:
                             (context, animation, animation2, widget) =>
                                 SlideTransition(
-                                    position: Tween(
-                                      begin: const Offset(1.0, 0.0),
-                                      end: const Offset(0.0, 0.0),
-                                    ).animate(animation),
-                                    child: widget),
+                          position: Tween(
+                            begin: const Offset(1.0, 0.0),
+                            end: const Offset(0.0, 0.0),
+                          ).animate(animation),
+                          child: widget,
+                        ),
                       ),
                     );
                   }
