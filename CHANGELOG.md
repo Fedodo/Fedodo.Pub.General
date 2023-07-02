@@ -1,3 +1,10 @@
+## v1.7.0
+
+-  🔀 Merge pull request #29 from Fedodo/dev
+-  🎨 Updated namespace
+-  ✨ Added profile head
+-  📝 Updated Changelog
+
 ## v1.6.5
 
 -  🔀 Merge pull request #28 from Fedodo/dev
