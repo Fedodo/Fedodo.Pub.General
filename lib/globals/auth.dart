@@ -1,4 +1,4 @@
-import 'package:fedodo_general/Globals/preferences.dart';
+import 'package:fedodo_general/globals/preferences.dart';
 import 'package:flutter/foundation.dart';
 
 class AuthGlobals {

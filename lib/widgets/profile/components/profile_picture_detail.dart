@@ -1,4 +1,4 @@
-import 'package:fedodo_general/Extensions/string_extensions.dart';
+import 'package:fedodo_general/extensions/string_extensions.dart';
 import 'package:flutter/material.dart';
 
 class ProfilePictureDetail extends StatefulWidget {

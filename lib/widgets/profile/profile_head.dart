@@ -3,7 +3,7 @@ import 'package:activitypub/APIs/followings_api.dart';
 import 'package:activitypub/APIs/outbox_api.dart';
 import 'package:activitypub/Models/actor.dart';
 import 'package:activitypub/Models/ordered_paged_collection.dart';
-import 'package:fedodo_general/Globals/general.dart';
+import 'package:fedodo_general/globals/general.dart';
 import 'package:flutter/material.dart';
 import 'components/profile_description.dart';
 import 'components/profile_name_row.dart';

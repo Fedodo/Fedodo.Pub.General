@@ -1,6 +1,6 @@
-import 'package:fedodo_general/Globals/auth.dart';
-import 'package:fedodo_general/Globals/preferences.dart';
-import 'package:fedodo_general/SuSi/susi_view.dart';
+import 'package:fedodo_general/globals/auth.dart';
+import 'package:fedodo_general/globals/preferences.dart';
+import 'package:fedodo_general/widgets/auth/susi_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 

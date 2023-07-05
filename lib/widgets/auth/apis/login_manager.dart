@@ -1,12 +1,12 @@
-import 'package:fedodo_general/Globals/preferences.dart';
-import 'package:fedodo_general/SuSi/OAuthHandler/custom_web_base_dummy.dart'
+import 'package:fedodo_general/globals/preferences.dart';
+import 'package:fedodo_general/widgets/auth/oauth_handler/custom_web_base_dummy.dart'
     if (dart.library.html) '../OAuthHandler/custom_web_base.dart';
 import 'package:flutter/foundation.dart';
 import 'package:oauth2_client/access_token_response.dart';
 import 'package:oauth2_client/interfaces.dart';
 import 'package:oauth2_client/oauth2_client.dart';
 import 'package:random_string/random_string.dart';
-import '../../Globals/auth.dart';
+import '../../../globals/auth.dart';
 
 class LoginManager {
   late OAuth2Client client;

@@ -1,5 +1,5 @@
 import 'package:easy_sidemenu/easy_sidemenu.dart';
-import 'package:fedodo_general/Globals/general.dart';
+import 'package:fedodo_general/globals/general.dart';
 import 'package:flutter/material.dart';
 
 class Navigation extends StatefulWidget {

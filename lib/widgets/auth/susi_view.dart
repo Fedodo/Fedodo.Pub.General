@@ -1,8 +1,8 @@
 import 'dart:io';
-import 'package:fedodo_general/Globals/preferences.dart';
-import 'package:fedodo_general/SuSi/APIs/application_registration.dart';
+import 'package:fedodo_general/globals/preferences.dart';
+import 'package:fedodo_general/widgets/auth/apis/application_registration.dart';
 import 'package:flutter/material.dart';
-import 'APIs/login_manager.dart';
+import 'apis/login_manager.dart';
 import 'package:flutter/foundation.dart' show kIsWeb;
 
 class SuSiView extends StatelessWidget {
