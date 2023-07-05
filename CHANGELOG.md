@@ -1,3 +1,11 @@
+## v1.8.1
+
+-  🔀 Merge pull request #33 from Fedodo/dev
+-  🔖 Updated version
+-  🔥 Removed appTitle
+-  🎨 Updated structure
+-  📝 Updated Changelog
+
 ## v1.8.0
 
 -  🔀 Merge pull request #32 from Fedodo/dev
