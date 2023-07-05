@@ -8,14 +8,12 @@ class UserHeader extends StatelessWidget {
   const UserHeader({
     Key? key,
     required this.profileId,
-    required this.appTitle,
     this.publishedDateTime,
     required this.profile,
   }) : super(key: key);
 
   final String profileId;
   final DateTime? publishedDateTime;
-  final String appTitle;
   final Widget profile;
 
   @override
