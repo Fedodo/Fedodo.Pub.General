@@ -1,3 +1,10 @@
+## v1.8.0
+
+-  🔀 Merge pull request #32 from Fedodo/dev
+-  🔖 Updated version
+-  ✨ Added post components
+-  📝 Updated Changelog
+
 ## v1.7.2
 
 -  🔀 Merge pull request #31 from Fedodo/dev
