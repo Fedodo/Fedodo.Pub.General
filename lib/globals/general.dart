@@ -1,4 +1,4 @@
-import 'package:fedodo_general/Globals/preferences.dart';
+import 'package:fedodo_general/globals/preferences.dart';
 import 'package:jwt_decoder/jwt_decoder.dart';
 import 'package:logger/logger.dart';
 

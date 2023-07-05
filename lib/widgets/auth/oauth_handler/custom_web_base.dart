@@ -1,5 +1,5 @@
-import 'package:fedodo_general/Globals/auth.dart';
-import 'package:fedodo_general/Globals/preferences.dart';
+import 'package:fedodo_general/globals/auth.dart';
+import 'package:fedodo_general/globals/preferences.dart';
 import 'package:oauth2_client/interfaces.dart';
 // ignore: avoid_web_libraries_in_flutter
 import 'dart:html' as html;

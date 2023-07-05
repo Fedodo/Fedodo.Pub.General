@@ -1,6 +1,6 @@
 import 'package:activitypub/activitypub.dart';
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:fedodo_general/Extensions/string_extensions.dart';
+import 'package:fedodo_general/extensions/string_extensions.dart';
 import 'package:flutter/material.dart';
 import 'package:timeago/timeago.dart' as timeago;
 
@@ -8,14 +8,12 @@ class UserHeader extends StatelessWidget {
   const UserHeader({
     Key? key,
     required this.profileId,
-    required this.appTitle,
     this.publishedDateTime,
     required this.profile,
   }) : super(key: key);
 
   final String profileId;
   final DateTime? publishedDateTime;
-  final String appTitle;
   final Widget profile;
 
   @override

@@ -1,4 +1,4 @@
-import '../Globals/preferences.dart';
+import '../globals/preferences.dart';
 
 extension StringExtensions on String{
   String asFedodoProxyString() {

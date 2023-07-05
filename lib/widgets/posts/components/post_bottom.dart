@@ -10,12 +10,10 @@ class PostBottom extends StatelessWidget {
   const PostBottom({
     Key? key,
     required this.activity,
-    required this.appTitle,
     required this.createPostView,
   }) : super(key: key);
 
   final Activity activity;
-  final String appTitle;
   final Widget createPostView;
 
   @override

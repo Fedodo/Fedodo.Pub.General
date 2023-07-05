@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'dart:io';
-import 'package:fedodo_general/Globals/auth.dart';
-import 'package:fedodo_general/Globals/preferences.dart';
+import 'package:fedodo_general/globals/auth.dart';
+import 'package:fedodo_general/globals/preferences.dart';
 import 'package:flutter_guid/flutter_guid.dart';
 import 'package:http/http.dart' as http;
 import 'package:flutter/foundation.dart' show kIsWeb;
