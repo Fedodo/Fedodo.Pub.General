@@ -6,9 +6,15 @@ class VibrateFeedback {
     bool canVibrate = await Vibrate.canVibrate;
 
     if (!kIsWeb && canVibrate) {
-      if (canVibrate) {
-        Vibrate.feedback(FeedbackType.light);
-      }
+      Vibrate.feedback(FeedbackType.light);
+    }
+  }
+
+  static void feedbackSelect() async {
+    bool canVibrate = await Vibrate.canVibrate;
+
+    if (!kIsWeb && canVibrate) {
+      Vibrate.feedback(FeedbackType.selection);
     }
   }
 }
