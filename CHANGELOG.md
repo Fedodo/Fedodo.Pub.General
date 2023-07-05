@@ -1,3 +1,9 @@
+## v1.8.2
+
+-  🔀 Merge pull request #34 from Fedodo/dev
+-  ✨ Added select feedback
+-  📝 Updated Changelog
+
 ## v1.8.1
 
 -  🔀 Merge pull request #33 from Fedodo/dev
