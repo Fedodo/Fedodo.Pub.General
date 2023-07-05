@@ -10,6 +10,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+
   activitypub: ^1.2.0
 
   shared_preferences: ^2.0.17
@@ -22,6 +23,11 @@ dependencies:
   logger: ^1.4.0
   flutter_html: ^3.0.0-beta.1
   url_launcher: ^6.1.8
+  font_awesome_flutter: ^10.3.0
+  flutter_vibrate: ^1.3.0
+  share_plus: ^7.0.1
+  cached_network_image: ^3.2.3
+  timeago: ^3.3.0
 
 dev_dependencies:
   flutter_test:
