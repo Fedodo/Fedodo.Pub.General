@@ -1,3 +1,9 @@
+## v1.8.3
+
+-  🔀 Merge pull request #35 from Fedodo/dev
+-  🐛 Fixed conditional import
+-  📝 Updated Changelog
+
 ## v1.8.2
 
 -  🔀 Merge pull request #34 from Fedodo/dev
